@@ -1,0 +1,149 @@
+:root {
+  --background: #1E1E1E;
+  --principal:#004FFF;
+  --branco: #F1F1F1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+
+  background: var(--background);
+  color: var(--branco)
+}
+
+.main {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.tabs {
+  margin-top: 76px;
+  margin-bottom: 32px;
+}
+
+.tabs button {
+  color: var(--branco);
+
+  border: none;
+  background: transparent;
+
+  text-transform: uppercase;
+  font-size: 20px;
+
+  padding: 1px;
+  margin: 0 5px;
+
+  outline: none;
+
+  position: relative;
+
+}
+
+.tabs button::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  content: '';
+  height: 2px;
+  width: 0%;
+
+  background: var(--principal);
+
+  transition: .4s;
+}
+
+.tabs button:hover::after,
+.tabs button.active::after {
+  width: 100%;
+}
+
+.content #sobre  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content #sobre img {
+  width: 300px;
+  border-radius: 50%;
+  margin-bottom: 38px;
+}
+
+.content #sobre h2 {
+  font-size: 36px;
+}
+
+.content #sobre p  {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.content #sobre p + p {
+  font-size: 18px;
+}
+
+.content #habilidades {
+  flex-direction: column;
+  align-items: center;
+}
+
+.content #habilidades span {
+  width: 60%;
+  margin-top: 40px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.content #contato {
+  flex-direction: column;
+
+}
+
+.content #contato span {
+  display: flex;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.content #contato span img {
+  margin-right: 12px;
+}
+
+
+.content #social span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.content #social  img{
+  width: 100px;
+}
+
+
+.content>section {
+  animation: up 2s;
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+  }
+}
