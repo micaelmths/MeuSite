@@ -147,3 +147,24 @@ body {
     opacity: 1;
   }
 }
+
+
+@media (min-width: 400px) {
+  .tabs button {
+    font-size: 16px;
+  }
+
+
+  .main {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  .content #sobre h2 {
+    font-size: 28px
+  }
+
+  .content #social img {
+    width: 70px;
+  }
+}
